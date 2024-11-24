@@ -29,12 +29,7 @@ body {
     padding: 20px;
     transition: transform 0.3s;
   }
-  .pc:hover {
-    background: #A2C3A4; /* Slightly darker green background on hover */
-    transform: scale(0.02); /* Slight zoom-in effect */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
-    backdrop-filter: blur(15px); /* Increased blur on hover */
-  }
+  
   
   .product-card img {
     width: 100%;
@@ -112,3 +107,43 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
     backdrop-filter: blur(15px); /* Increased blur on hover */
   }
+  button.btn-success {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  button.btn-danger {
+    background-color: red;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  
+  }
+  
+  button.btn-success:hover {
+    background-color: #218838;
+  }
+  
+  button.btn-danger:hover {
+    background-color: #c82333;
+  }
+  .btn-container{
+    display: flex;
+    gap: 10px;
+  }
+  .src{
+    width: 300px;
+    height: 300px;
+  }
+  .container{
+    padding-left: 100px;
+    padding-right: 12px;
+  }
+  

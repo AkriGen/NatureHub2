@@ -1,6 +1,14 @@
 import { Component } from '@angular/core';
-import { CartService, Product } from '../cart.service';
+import { CartService } from '../cart.service';
 
+export interface Home {
+  id: number;
+  name: string;
+  price: number;
+  quantity: number;
+  imageUrl: string;  // Add an imageUrl property to hold the image path
+  offer:number;
+}
 @Component({
   selector: 'app-home',
   standalone: false,
@@ -9,23 +17,20 @@ import { CartService, Product } from '../cart.service';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  products: Product[] = [
-    { id: 1, name: 'Product 1', price: 10, quantity: 1, imageUrl: 'assets/images/Product1.jpg' },
-    { id: 2, name: 'Product 2', price: 20, quantity: 1, imageUrl: 'assets/product2.jpg' },
-    { id: 3, name: 'Product 3', price: 30, quantity: 1, imageUrl: 'assets/product3.jpg' },
-    { id: 4, name: 'Product 4', price: 40, quantity: 1, imageUrl: 'assets/product4.jpg' },
-    { id: 5, name: 'Product 5', price: 50, quantity: 1, imageUrl: 'assets/product5.jpg' },
-    { id: 6, name: 'Product 6', price: 60, quantity: 1, imageUrl: 'assets/product6.jpg' },
-    { id: 7, name: 'Product 7', price: 70, quantity: 1, imageUrl: 'assets/product7.jpg' },
-    { id: 8, name: 'Product 8', price: 80, quantity: 1, imageUrl: 'assets/product8.jpg' },
-    { id: 9, name: 'Product 9', price: 90, quantity: 1, imageUrl: 'assets/product9.jpg' },
-    { id: 10, name: 'Product 10', price: 100, quantity: 1, imageUrl: 'assets/product10.jpg' }
+  products: Home[] = [
+    { id: 1, name: 'Organic Alovera Gel with Turmiric Extract', price: 199, quantity: 1, imageUrl: 'https://files.organicharvest.in/site-images/800x800/AT1_2.png',offer:20},
+    { id: 2, name: 'Sunscreen-Oily Skin SPF 60 100gm', price: 200, quantity: 1, imageUrl: 'https://files.organicharvest.in/site-images/800x800/1-9at.jpg',offer:30 },
+    { id: 3, name: 'Himalaya Triphala Tablets', price: 310, quantity: 1, imageUrl: 'https://images.apollo247.in/pub/media/catalog/product/H/I/HIM0151_1-JULY23_1.jpg?tr=q-80,f-webp,w-150,dpr-2,c-at_max',offer:20 },
+    { id: 4, name: 'Anti-Skin Tan Remover', price: 240, quantity: 1, imageUrl: 'https://files.organicharvest.in/site-images/800x800/Anti-tan-scrub_6.jpg',offer:10},
+    { id: 5, name: 'Himalya Bhami for Mind Wellness', price: 50, quantity: 1, imageUrl: 'https://images.apollo247.in/pub/media/catalog/product/b/r/bra0023_1-jan24_1_.jpg?tr=q-80,f-webp,w-150,dpr-2,c-at_max',offer:20 },
+    { id: 6, name: 'OH Coconut Oil Comb Applicator', price: 600, quantity: 1, imageUrl: 'https://files.organicharvest.in/site-images/800x800/1-25CCOC.jpg',offer:20 },
+   
   ];
 
   
   constructor(private cartService: CartService) {}
 
-  addToCart(product: Product): void {
+  addToCart(product: Home): void {
     this.cartService.addToCart(product);
     alert(`${product.name} added to cart!`);
   }

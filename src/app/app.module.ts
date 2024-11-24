@@ -10,14 +10,16 @@ import { HealthtipsComponent } from './healthtips/healthtips.component';
 import { CartComponent } from './cart/cart.component';
 import { SkincareComponent } from './skincare/skincare.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './Authentication/login/login.component';
+import { SignupComponent } from './Authentication/signup/signup.component';
 import { RemediesComponent } from './remedies/remedies.component';
 import { ProductComponent } from './product/product.component';
 import { PaymentComponent } from './payment/payment.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component';
+import { OffPipe } from './off.pipe';
+import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component'
     PaymentComponent,
     AboutusComponent,
     ContactusComponent,
-    PrivacypolicyComponent
+    PrivacypolicyComponent,
+    OffPipe,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
