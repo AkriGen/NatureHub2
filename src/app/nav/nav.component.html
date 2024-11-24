@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-md navbar-light" style="background-color: rgb(5, 66, 5) ">
+    <div class="container-fluid">
+      <a class="navbar-brand text-light col-md-6" routerLink="product">
+        <i class="fab fa-canadian-maple-leaf fa-lg">Naturehub</i>
+      </a>
+  
+      <!-- Toggle Button for Small Screens -->
+      <button class="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" ><i class="fas fa-bars text-light fa-lg"></i></span>
+      </button>
+  
+      <!-- Navbar Links and Search Bar -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="d-flex flex-grow-1 justify-content-center">
+          <input class="form-control search-bar col-md-6 col-7" type="search" placeholder="Search" aria-label="Search" />
+        </div>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link text-light" routerLink="cart">
+              <i class="fas fa-shopping-cart mt-2 text-light fa-lg"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" routerLink="">
+              <i class="fas fa-bookmark mt-2 text-light fa-lg"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light " routerLink="user">
+              <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle " height="25" alt="User Avatar" loading="lazy" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Navbar2 -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-success-subtle">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="fas fa-bars text-dark fa-lg"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-dark h11" aria-current="page" routerLink="/">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" routerLink=""  data-bs-toggle="dropdown" aria-expanded="false">Remedies</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item h11" routerLink="healthtips">Health</a></li>
+                  <li><a class="dropdown-item  h11" routerLink="">SkinCare</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" routerLink="remedies">All Remedies</a></li>
+              </ul>
+            </li>
+            <li class="nav-item h11">
+              <a class="nav-link text-dark h11" routerLink="healthtips">
+                Health Tips
+              </a>
+            </li>
+          </ul>
+          <button class="btn btn-outline-success ms-auto btn-login" routerLink="login">Login/SignIn</button>
+          
+        </div>
+      </div>
+    </nav>
+    

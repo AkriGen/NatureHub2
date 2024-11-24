@@ -1,0 +1,72 @@
+<div id="videoCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <!-- First Video Slide -->
+      <div class="carousel-item active">
+        <video class="d-block w-100" autoplay loop muted>
+          <source src="assets\images\delivery.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <!-- Second Video Slide -->
+      <div class="carousel-item ">
+        <video class="d-block w-100" autoplay loop muted>
+          <source src="assets\images\Slide1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  
+    <!-- Carousel Controls (optional) -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div> <hr >
+  <h2 class="bg-primary-subtle text-danger text-center product-container" style="border: 1px solid #869D96;" ><b>Explore Your Needs</b></h2>
+  <div class="product-container">
+    <!-- Row 1 -->
+    <div class="product-row">
+      <div class="product-card">
+        <img src="assets\images\Medicine1.png" alt="Product 1">
+        <h3>Home Remedies</h3>
+        <button style="background-color:  rgb(8, 99, 8);" routerLink="/remedies"><b>View </b></button>
+      </div>
+      <div class="product-card">
+        <img src="assets\images\skincare.jpg" alt="Product 2">
+        <h3>Skincare</h3>
+        <button style="background-color: rgb(136, 23, 23);"><b>View </b></button>
+      </div>
+      <div class="product-card">
+        <img src="assets\images\Health.png" alt="Product 3">
+        <h3>Health Tips</h3>
+        <button style="background-color:  rgb(8, 99, 8);;"><b>View </b></button>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <h2 class="bg-success-subtle text-danger text-center" style="border: 1px solid #5ea367;"><b>Products</b></h2>
+  <div class="container mt-3">
+    <div class="row">
+            <div class="col-md-3 mb-3 card" *ngFor="let product of products" class="product-card">
+              <img [src]="product.imageUrl" alt="{{ product.name }}" class="product-image"/>
+              <h3>{{ product.name }}</h3>
+              <p>Price: ${{ product.price }}</p>
+              <div class="row">
+                <div class="col-md">
+                    <button class="bg-danger me-5" (click)="buyNow()">Buy Now</button>
+                    <button (click)="addToCart(product)">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+    </div>
+
+   </div>
+  
+    
+    
+  
+ 

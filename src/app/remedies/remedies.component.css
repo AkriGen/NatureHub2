@@ -1,0 +1,223 @@
+/* Card Styling */
+body {
+    font-family: 'Spectral', serif;
+  }
+  .card {
+    min-height: 400px; /* Adjust based on your design */
+   /* To handle any overflow content */
+   height: 100%; /* Ensures consistent card heights */
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    border: 1px solid #869D96; /* Subtle border color from the palette */
+    border-radius: 8px;
+    background: #C4F1BE; /* Light green background color */
+    backdrop-filter: blur(10px); /* Glass blur effect */
+    position: relative; /* To position the bookmark button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  .card:hover {
+    background: #A2C3A4; /* Slightly darker green background on hover */
+    transform: scale(1.02); /* Slight zoom-in effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
+    backdrop-filter: blur(15px); /* Increased blur on hover */
+  }
+  
+  
+  .btn button{
+    transition: all 0.3s linear;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+  }
+  .btn-primary {
+    align-self: flex-start;
+    margin-top: auto; /* Push the button to the bottom */
+  }
+  .rbtn button{
+    transition: all 0.3s linear;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    padding: 8px 12px;
+    font-size: 0.9em;
+    cursor: pointer;
+    
+  }
+  .btn {
+    align-self: flex-end;
+     /* Ensures buttons are always at the bottom */
+  }
+  /* Hover Effect for Cards */
+  
+  /* Long Description */
+  .card .long-description {
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    /* overflow: hidden; */
+    margin-top: 0.5rem;
+  
+  }
+  .long-description{
+    margin-bottom: 18px;
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+    max-height: 0;
+  
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+  
+  }
+  .long-description.expanded-description {
+    max-height: 80px; /* Adjust as needed */
+    opacity: 1;
+  }
+  .long-description.collapsed-description {
+    max-height: 0;
+    opacity: 0;
+  }
+  
+  /* Expanded Card */
+  .card.expanded-card {
+    transition: all 0.3s ease;
+  }
+  
+  .card.expanded-card .long-description {
+    max-height: 200px; /* Adjust the height as needed for your content */
+    opacity: 1;
+    margin-bottom: 18px;
+  
+  }
+  
+  /* Bookmark Button Styling */
+  .bookmark-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 14px; /* Icon size */
+    color:  #fa0505; /* Default color */
+    transition: color 0.3s ease, transform 0.3s ease;
+    border-radius: 4px;
+  
+  }
+  
+  .bookmark-btn:hover {
+    color: #52A876; /* Brighter green on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+    background: rgba(255, 255, 255, 0.4); /* Brighter background on hover */
+  
+  }
+  
+  /* Active Bookmark */
+  .active-bookmark {
+    color: #fa0505; /* Bright green when bookmarked */
+  }
+  
+  /* Card Image */
+  img{
+    height: 290px;
+    min-height: 290px;
+    max-height: 290px;
+  }
+  .card-img-top {
+    /* height: 290px; 
+    min-height: 290px;
+    max-height: 290px;  */
+     /* Fixed height for uniform cards */
+    object-fit: cover; /* Ensures image scaling */
+    transition: max-height 0.3s ease-in-out;
+  
+    border-radius: 8px 8px 0 0; /* Rounded corners for top of the card */
+    /* transition: height 0.3s ease-in-out; */
+  
+  }
+  
+  /* Bookmark Icon */
+  .bookmark-btn i {
+    display: inline-block;
+    font-size: 21px; 
+    backdrop-filter: blur(2px); /* Slight blur for button */
+    /* Light border */
+     /* Rounded button */
+     border-radius: 4px;
+    /* padding: 8px; */
+    color: #fa0505;
+    transition: all 0.3s ease;
+  
+  }
+  
+  /* Additional Hover Effect for Cards */
+  .card:hover .bookmark-btn i {
+    transform: scale(1.2); 
+    /* Slightly enlarge the bookmark icon when card is hovered */
+  }
+  
+  /* Colors for Consistency */
+  .card:nth-child(even) {
+    background: #A2C3A4; /* Alternating background color for variety */
+  }
+  
+  .card:nth-child(odd) {
+    background: white;
+  }
+  
+  .card:hover {
+    background: #FCFAEE;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;/* On hover, apply a unique greenish shade */
+  }
+  
+  /* Box Shadow Transition for Hover */
+  .card:hover {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; /* Larger shadow on hover */
+  }
+  .card-title {
+    margin-bottom: 0.5rem;
+    color: black; /* White text for contrast */
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow for readability */
+  
+  }
+  .card-text {
+    margin-bottom: 18px;
+    /* margin-top: */
+    color:black; /* Light gray for subtle contrast */
+  
+  
+  }
+  
+  .expanded-card {
+    transition: all 0.3s ease;
+    transform: scale(1.05); /* Slight zoom to highlight */
+    z-index: 1; /* Bring the expanded card to the front */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .blurred {
+    filter: blur(5px);
+    cursor: pointer;
+    filter: blur(4px);
+  
+  }
+  
+  .fixed-card {
+    height: 400px; /* Fixed height for all cards */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Take up remaining space after image */
+    overflow: hidden; /* Prevent body content from spilling over */
+  }

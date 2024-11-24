@@ -1,0 +1,10 @@
+<h2>Review Your Order</h2>
+<div *ngIf="cart.length === 0">
+  <p>Your cart is empty.</p>
+</div>
+<div *ngFor="let item of cart" class="cart-item">
+  <img [src]="item.imageUrl" alt="{{ item.name }}" class="cart-image"/>
+  <p>{{ item.name }} - ${{ item.price }} x {{ item.quantity }}</p>
+</div>
+
+<button (click)="processPayment()">Confirm Payment</button>

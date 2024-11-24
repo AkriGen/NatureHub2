@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color:antiquewhite;
+  }
+.navbar{
+  border: 1px solid #869D96;
+  }
+i:hover{
+    color: goldenrod;
+}
+.btn-login:hover{
+    background-color: rgb(14, 77, 14);
+    color: #fff;
+}
+
+/* Navbar footer */
+.navbar-footer {
+    background-color: black;
+    text-align: center;
+    margin-top: auto; /* Push footer to the bottom */
+    font-size: 14px;
+    border-top: 1px solid #575757;
+    padding-top: 10px;
+  }
+
+  
+  /* Default styling for the search bar */
+  .search-bar {
+    width: 200px;
+    flex-wrap:wrap;
+    padding: 10px;
+    border: 1px solid #575757;
+    border-radius: 22px;
+    transition: width 0.3s ease-in-out; /* Smooth transition effect */
+  }
+  
+  /* Expanding the search bar on focus */
+  .search-bar:focus {
+    width: 350px; /* New expanded width */
+    border-color: #007bff; /* Optional: change border color on focus */
+    outline:auto; /* Remove the default outline */
+  }
+  
+  
