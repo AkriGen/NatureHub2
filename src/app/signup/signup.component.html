@@ -1,0 +1,30 @@
+<div class="signup-container">
+  <h2>Signup</h2>
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="username">Username:</label>
+      <input id="username" formControlName="username" type="text" />
+      <div *ngIf="signupForm.get('username')?.invalid && signupForm.get('username')?.touched">
+        Username is required and should be at least 3 characters.
+      </div>
+    </div>
+
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" type="email" />
+      <div *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched">
+        Enter a valid email.
+      </div>
+    </div>
+
+    <div>
+      <label for="password">Password:</label>
+      <input id="password" formControlName="password" type="password" />
+      <div *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched">
+        Password must be at least 8 characters, include at least one uppercase letter, one lowercase letter, and one digit.
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="signupForm.invalid">Sign Up</button>
+  </form>
+</div>

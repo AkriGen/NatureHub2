@@ -1,9 +1,20 @@
-<h2>Your Cart</h2>
-<div *ngIf="cart.length === 0">
-  <p>Your cart is empty.</p>
+<div class="row row2">
+  <div *ngIf="cart.length === 0">
+    <h1>Your cart is empty.<i class="fas fa-face-frown"></i></h1>
+  </div>
+  <div *ngIf="cart.length >=1">
+    <h1 class="text-danger text-center" data-aos="fade-up">Your Cart &nbsp; <i class="far fa-face-laugh-wink text-warning"></i></h1> 
+
+  </div>
+  <div *ngFor="let item of cart" class="cart-item col-12 col-md-3 col-lg-3 product-card" data-aos="flip-left">
+    <img [src]="item.imageUrl" alt="{{ item.name }}" class="cart-image"/>
+    <p class="text-dark">{{ item.name }} - {{ item.price| currency:"INR" }} Quatity: {{ item.quantity }}</p>
+    
+      <button class="col-md" (click)="removeFromCart(item)">Remove</button> 
+    <button class="col-md" (click)="buyNow()"> Buy </button>
+  
+  </div>
 </div>
-<div *ngFor="let item of cart" class="cart-item">
-  <img [src]="item.imageUrl" alt="{{ item.name }}" class="cart-image"/>
-  <p>{{ item.name }} - ${{ item.price }} x {{ item.quantity }}</p>
-  <button (click)="removeFromCart(item)">Remove</button>
-</div>
+<script>
+  AOS.init();
+</script>

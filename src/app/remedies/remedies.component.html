@@ -1,40 +1,28 @@
-<div class="container mt-3">
-    <div class="row">
-      <div class="col-md-3 mb-3" *ngFor="let card of cards; let i = index">
-        <div class="card h-100 fixed-card" [ngClass]="{'expanded-card': expandedCardIndex === i}">
-          <!-- Card Image -->
-          <img 
-            [src]="card.image" 
-            class="card-img-top" 
-            alt="{{ card.title }}" 
-            [style.maxHeight]="expandedCardIndex === i ? '80px' : '120px'"
-            [ngClass]="{ blurred: card.isBlurred }"
-            (click)="toggleBlur(i)"
-          >
-          <div class="card-body d-flex flex-column">
-            <!-- Card Title -->
-            <h5 class="card-title">{{ card.title }}</h5>
+<div class="container mt-4" style="padding-left: 10px; padding-right: 10px;">
+  <!-- Cards Row -->
+  <div class="row mb-4">
+    <div class="col-md-4 mt-4 " *ngFor="let card of cards">
+      <div class="card h-100 shadow-sm hover-card">
+        <!-- Card Image -->
+        <img [src]="card.image" class="card-img-top rounded-top" alt="{{ card.title }}">
+        <div class="card-body d-flex flex-column">
+          <!-- Card Title -->
+          <h5 class="card-title text-center text-dark">{{ card.title }}</h5>
   
-            <!-- Short Description -->
-            <p class="card-text">{{ card.shortDescription }}</p>
-  
-            <!-- Long Description -->
-            <div class="long-description mt-3" 
-                 [ngClass]="{'expanded-description': expandedCardIndex === i, 'collapsed-description': expandedCardIndex !== i}">
-              {{ card.longDescription }}
-            </div>
-  
-            <!-- Toggle Expand Button -->
-            <button class="btn btn-primary mt-auto" (click)="toggleCard(i)">
-              {{ expandedCardIndex === i ? 'Read Less' : 'Read More' }}
-            </button>
-  
-            <!-- Bookmark Button -->
-            <button class="bookmark-btn mt-2" (click)="toggleBookmark(i)">
-              <i [ngClass]="card.bookmarked ? 'bi bi-bookmarks-fill active-bookmark' : 'bi bi-bookmarks'"></i>
-            </button>
-          </div>
+          <!-- Short Description -->
+          <h6 class="card-text text-success-muted text-center">{{ card.shortDescription }}</h6>
+          <p class="text-justify">{{ card.longDescription }}</p>
+          <p><b class="text-danger">Benefits:</b> &nbsp; {{card.benefits}}</p>
+          <p><b class="text-primary">PreperationMethod:</b> &nbsp; {{card.PreperationMethod}}</p>
+          <p><b class="text-success">Usage:</b> &nbsp; {{card.UsageInstructions}}</p>
+          <!-- Bookmark Button -->
+          <button class="btn btn-outline-primary mt-auto bookmark-icon">
+            <i class="bi bi-bookmarks" (click)="bookmarkCard(card)"></i> Bookmark
+          </button>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Detailed Section -->
+  

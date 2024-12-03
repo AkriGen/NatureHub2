@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -10,8 +10,8 @@ import { HealthtipsComponent } from './healthtips/healthtips.component';
 import { CartComponent } from './cart/cart.component';
 import { SkincareComponent } from './skincare/skincare.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
-import { LoginComponent } from './Authentication/login/login.component';
-import { SignupComponent } from './Authentication/signup/signup.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 import { RemediesComponent } from './remedies/remedies.component';
 import { ProductComponent } from './product/product.component';
 import { PaymentComponent } from './payment/payment.component';
@@ -20,6 +20,9 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component';
 import { OffPipe } from './off.pipe';
 import { SliderComponent } from './slider/slider.component';
+import { CancellationComponent } from './cancellation/cancellation.component';
+import { BookmarkComponent } from './bookmark/bookmark.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -40,11 +43,16 @@ import { SliderComponent } from './slider/slider.component';
     ContactusComponent,
     PrivacypolicyComponent,
     OffPipe,
-    SliderComponent
+    SliderComponent,
+    CancellationComponent,
+    BookmarkComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component , OnInit, AfterViewInit} from '@angular/core';
 import { CartService } from '../cart.service';
+import * as AOS from 'aos';
+
+
 
 export interface Home {
   id: number;
@@ -16,7 +19,10 @@ export interface Home {
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+
+export class HomeComponent implements OnInit {
+  
+    
   products: Home[] = [
     { id: 1, name: 'Organic Alovera Gel with Turmiric Extract', price: 199, quantity: 1, imageUrl: 'https://files.organicharvest.in/site-images/800x800/AT1_2.png',offer:20},
     { id: 2, name: 'Sunscreen-Oily Skin SPF 60 100gm', price: 200, quantity: 1, imageUrl: 'https://files.organicharvest.in/site-images/800x800/1-9at.jpg',offer:30 },
@@ -27,7 +33,9 @@ export class HomeComponent {
    
   ];
 
-  
+  ngOnInit(): void {
+    AOS.init();  // Initialize AOS animations
+  }
   constructor(private cartService: CartService) {}
 
   addToCart(product: Home): void {
@@ -45,5 +53,6 @@ export class HomeComponent {
     // Redirect to payment gateway (you can replace this URL with a real payment gateway)
     window.location.href = 'https://example-payment-gateway.com';
   }
+  
 
 }

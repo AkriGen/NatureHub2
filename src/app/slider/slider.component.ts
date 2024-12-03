@@ -11,7 +11,7 @@ export class SliderComponent {
   images = [
     { url: 'https://img.freepik.com/free-photo/battering-basil_23-2147985273.jpg?uid=R175532202&ga=GA1.1.1551567194.1732466269&semt=ais_hybrid', alt: 'Image 1' },
     { url: 'https://www.hyperbaricmedicalsolutions.com/hs-fs/hubfs/Blog_Art/WHAT-IS-HOLISTIC-MEDICINE-.jpg?width=1350&name=WHAT-IS-HOLISTIC-MEDICINE-.jpg', alt: 'Image 2' },
-    { url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCug-J-2oF-VtiRLGD0Bp9NFyXXLR5PO1qgQ&s', alt: 'Image 3' }
+    { url: 'assets/Nature12.mp4', alt: 'Image 3' }
   ];
 
   currentIndex = 0;

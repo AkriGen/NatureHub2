@@ -1,0 +1,52 @@
+/* src/app/bookmark/bookmark.component.css */
+.card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 16px;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .product-card {
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    width: 300px;
+    max-width: 300px;  /* Fixed width for cards */
+    height: 450px;     /* Fixed height for cards */
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    background-color:burlywood;
+  }
+  .row2{
+    padding-right: 30px;
+    padding-left: 40px;
+    padding-top: 30px;
+
+  }
+  .product-card img {
+    margin-top: 20px;
+    max-width: 100%;
+    height: 80px;
+    border-radius: 10px;
+  }
+  button{
+    background-color: rgb(183, 16, 16);
+    color: #f9f9f9;
+    border: 0;
+    border-radius: 20px;
+    font-size: large;
+  }
+  button:hover{
+    background-color: rgb(18, 18, 81);
+  }
